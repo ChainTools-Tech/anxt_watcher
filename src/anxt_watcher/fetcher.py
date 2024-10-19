@@ -1,6 +1,7 @@
 import requests
 from tqdm import tqdm
 
+
 def fetch_data(host):
     url_http = f"http://{host}/nxt?requestType=getState"
     url_https = f"https://{host}/nxt?requestType=getState"

@@ -8,6 +8,7 @@ from anxt_watcher.parser import parse_data
 from anxt_watcher.utils import read_hosts, sort_data
 from anxt_watcher.cli import get_cli_args
 
+
 def main():
     # Configure logging
     configure_logging()

@@ -1,10 +1,27 @@
+import colorama
+from colorama import Fore, Style
+
+# Initialize colorama for cross-platform support (Windows, macOS, Linux)
+colorama.init(autoreset=True)
+
 def parse_data(host, data):
+    """Parse the fetched data and add color based on the blockchain state."""
     if data:
+        blockchain_state = data.get("blockchainState", "N/A")
+
+        # Apply color based on the state of the blockchain
+        if blockchain_state == "UP_TO_DATE":
+            colored_state = f"{Fore.GREEN}{blockchain_state}{Style.RESET_ALL}"
+        elif blockchain_state == "DOWNLOADING":
+            colored_state = f"{Fore.YELLOW}{blockchain_state}{Style.RESET_ALL}"
+        else:
+            colored_state = f"{Fore.RED}{blockchain_state}{Style.RESET_ALL}"
+
         return {
             "Host": host,
             "Application": data.get("application", "N/A"),
             "Version": data.get("version", "N/A"),
-            "Blockchain State": data.get("blockchainState", "N/A"),
+            "Blockchain State": colored_state,  # Add the colored blockchain state
             "Number of Blocks": data.get("numberOfBlocks", "N/A"),
             "Is Offline": data.get("isOffline", "N/A"),
             "Services": ", ".join(data.get("services", [])),
@@ -21,7 +38,7 @@ def parse_data(host, data):
             "Host": host,
             "Application": "ERROR",
             "Version": "ERROR",
-            "Blockchain State": "ERROR",
+            "Blockchain State": f"{Fore.RED}ERROR{Style.RESET_ALL}",  # Color the error state red
             "Number of Blocks": "ERROR",
             "Is Offline": "ERROR",
             "Services": "ERROR",
