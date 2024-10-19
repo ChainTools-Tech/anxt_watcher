@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,7 +9,6 @@ description = "A tool to monitor Jelurida nodes (Ardor and NXT)"
 authors = [
     { name = "qf3l3k | ChainTools", email = "contact@chaintools.tech" }
 ]
-
 license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.6"
@@ -25,18 +24,10 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10"
 ]
-license = { text = "MIT" }
-
 dependencies = [
     "requests>=2.26.0",
     "tabulate>=0.8.9",
     "tqdm>=4.62.3"
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "black"
 ]
 
 [project.scripts]
