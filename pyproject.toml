@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anxt_watcher"
+version = "0.1.0"
+description = "A tool to monitor Jelurida nodes (Ardor and NXT)"
+authors = [
+    { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.dependencies]
+requests = ">=2.26.0"
+tabulate = ">=0.8.9"
+tqdm = ">=4.62.3"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "requests",
+    "tabulate",
+    "tqdm"
+]
+
+[project.scripts]
+anxtwatch = "anxt_watcher.__main__:main"
