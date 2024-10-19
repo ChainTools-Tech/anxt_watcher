@@ -7,23 +7,36 @@ name = "anxt_watcher"
 version = "0.1.0"
 description = "A tool to monitor Jelurida nodes (Ardor and NXT)"
 authors = [
-    { name="Your Name", email="your.email@example.com" }
+    { name = "qf3l3k | ChainTools", email = "contact@chaintools.tech" }
 ]
+
+license = { file = "LICENSE" }
 readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10"
+]
 license = { text = "MIT" }
 
-[project.dependencies]
-requests = ">=2.26.0"
-tabulate = ">=0.8.9"
-tqdm = ">=4.62.3"
+dependencies = [
+    "requests>=2.26.0",
+    "tabulate>=0.8.9",
+    "tqdm>=4.62.3"
+]
 
 [project.optional-dependencies]
 dev = [
     "pytest",
-    "black",
-    "requests",
-    "tabulate",
-    "tqdm"
+    "black"
 ]
 
 [project.scripts]
