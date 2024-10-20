@@ -25,7 +25,7 @@ ANXT Watcher is available as a Python package. It requires Python 3.6 or higher.
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/yourusername/anxt_watcher.git](https://github.com/ChainTools-Tech/anxt_watcher.git)
+git clone https://github.com/ChainTools-Tech/anxt_watcher.git
 cd anxt_watcher
 ```
 
