@@ -48,9 +48,9 @@ Once installed, you can use the anxtwatch command to monitor your nodes. You wil
 Example Host File (hosts.txt)
 
 ```
-node1.example.com
-node2.example.com
-node3.example.com
+node1.example.com:27876
+node2.example.com:78776
+node3.example.com:27876
 ```
 
 **Running ANXT Watcher**
